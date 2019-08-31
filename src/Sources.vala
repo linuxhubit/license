@@ -19,28 +19,7 @@
 * Authored by: brombinmirko <https://linuxhub.it>
 */
 
-public class License.Application : Gtk.Application {
-
-    private MainWindow? window = null;
-
-    construct {
-        flags |= ApplicationFlags.HANDLES_OPEN;
-
-        application_id = Constants.APP_ID;
-    }
-
-    public static int main (string[] args) {
-        var app = new Application ();
-        return app.run (args);
-    }
-
-    public override void activate () {
-        if (window == null) {
-            window = new MainWindow ();
-            add_window (window);
-            window.show_all ();
-        } else {
-            window.present ();
-        }
-    }
+namespace License.Sources {
+    public const string GPLV3 = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/gnu-gpl-v3.0.md";
+    public const string APACHE2 = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/apache-v2.0.md";
 }

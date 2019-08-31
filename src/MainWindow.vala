@@ -1,5 +1,5 @@
 /*
-* Copyright (c) {{yearrange}} brombinmirko (https://linuxhub.it)
+* Copyright (c) 2019 brombinmirko (https://linuxhub.it)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -27,42 +27,83 @@ public class License.MainWindow : Gtk.Window {
     private Gtk.StackSidebar stack_sidebar;
     private Gtk.Paned paned;
     private Gtk.TextView license_gplv3;
-    private Gtk.TextView license_apache;
+    private Gtk.TextView license_apache2;
+    private Gtk.ScrolledWindow scrolled_gplv3;
+    private Gtk.ScrolledWindow scrolled_apache2;
+    private size_t license_read;
+    private DataInputStream license_stream;
+    private string license_data;
 
     construct {
+        /*
+        *  set default window size
+        */
         set_size_request (900, 800);
 
         var gtk_settings = Gtk.Settings.get_default ();
-
+        
+        /*
+        *  create switcher for dark/light theme selection
+        */
         mode_switch = new Granite.ModeSwitch.from_icon_name ("display-brightness-symbolic", "weather-clear-night-symbolic");
         mode_switch.primary_icon_tooltip_text = ("Light background");
         mode_switch.secondary_icon_tooltip_text = ("Dark background");
         mode_switch.valign = Gtk.Align.CENTER;
         mode_switch.bind_property ("active", gtk_settings, "gtk_application_prefer_dark_theme");
 
+        /*
+        *  create header_bar and pack buttons
+        */
         header_bar = new Gtk.HeaderBar ();
-        header_bar.set_title ("License");
+        header_bar.set_title (Constants.APP_NAME);
+        header_bar.set_subtitle (Constants.APP_DESCRIPTION);
         header_bar.show_close_button = true;
-        header_bar.has_subtitle = false;
+        header_bar.has_subtitle = true;
         header_bar.pack_end (mode_switch);
-
         set_titlebar (header_bar);
 
+        /*
+        * grab licenses data from web
+        * TODO:
+        * - Move this function to a dedicated class
+        * - When starting for the first time, save the licenses for offline use
+        * - We should use gresources as storage (?)
+        */
+        license_stream = new DataInputStream(File.new_for_uri (Sources.GPLV3).read());
+        license_data = license_stream.read_until("", out license_read);
+
+        scrolled_gplv3 = new Gtk.ScrolledWindow(null, null);
+        scrolled_gplv3.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC);
+        scrolled_gplv3.set_border_width(10);
         license_gplv3 = new Gtk.TextView();
-        var license_gplv3_buffer = license_gplv3.get_buffer();
-        license_gplv3_buffer.set_text("Sono una licenza OwO");
+        license_gplv3.get_buffer().set_text(license_data);
+        scrolled_gplv3.add (license_gplv3);
 
-        license_apache = new Gtk.TextView();
-        var license_apache_buffer = license_apache.get_buffer();
-        license_apache_buffer.set_text("Sono una licenza anche io OwO");
+        license_stream = new DataInputStream(File.new_for_uri (Sources.APACHE2).read());
+        license_data = license_stream.read_until("", out license_read);
+        scrolled_apache2 = new Gtk.ScrolledWindow(null, null);
+        scrolled_apache2.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC);
+        scrolled_apache2.set_border_width(10);
+        license_apache2 = new Gtk.TextView();
+        license_apache2.get_buffer().set_text(license_data);
+        scrolled_apache2.add (license_apache2);
 
+        /*
+        *  create the licenses stack layout
+        */
         main_stack = new Gtk.Stack ();
-        main_stack.add_titled (license_gplv3, "GPLv3", "GPLv3");
-        main_stack.add_titled (license_apache, "Apache", "Apache");
+        main_stack.add_titled (scrolled_gplv3, "GNU GPLv3", "GNU GPLv3");
+        main_stack.add_titled (scrolled_apache2, "Apache 2.0", "Apache 2.0");
         
+        /*
+        *  create sidebar for stack layout
+        */
         stack_sidebar = new Gtk.StackSidebar ();
         stack_sidebar.stack = main_stack;
 
+        /* 
+        *  create panned layout for license views
+        */
         paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
         paned.add1 (stack_sidebar);
         paned.add2 (main_stack);

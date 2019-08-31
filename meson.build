@@ -89,7 +89,9 @@ message ('Adds files to build')
 
 code_files = files(
     'src/Application.vala',
-    'src/MainWindow.vala'
+    'src/MainWindow.vala',
+    'src/Constants.vala',
+    'src/Sources.vala'
 )
 
 message ('Defines executable')
