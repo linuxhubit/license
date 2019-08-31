@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018 brombinmirko <{{email}}> -->
+<!-- Copyright (c) 2017 Adam Bieńkowski (https://github.com/donadigo/eddy) -->
 <component type="desktop">
-  <id>com.gitlab.brombinmirko.License.desktop</id>
+  <id>com.github.linuxhubsubpixel.license</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_group>brombinmirko</project_group>
   <project_license>GPL-3.0+</project_license>
-  <name></name>
-  <summary></summary>
-  <description></description>
-  <releases>
-    <release version="0.0.1" date="2018-05-05"/>
-  </releases>
+  <name>License</name>
+  <summary>Choose your project license</summary>
+  <description>
+    <p>An application born for elementary OS that helps you finding the best license for your open source project</p>
+  </description>
   <provides>
-    <binary>com.gitlab.brombinmirko.License</binary>
+    <binary>com.github.linuxhubsubpixel.license</binary>
   </provides>
+  <releases>
+      <release version="1.0.0" date="2019-08-31">
+        <description>
+          <p>Initial release</p>
+        </description>
+      </release>
+  </releases>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/linuxhubsubpixel/license/master/data/screenshot-1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/linuxhubsubpixel/license/master/data/screenshot-2.png</image>
+    </screenshot>
+  </screenshots>
+
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>
@@ -43,13 +57,14 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
-  <developer_name>brombinmirko</developer_name>
-  <url type="homepage">https://mirko.pm</url>
-  <url type="bugtracker">http://gitlab.com/brombinmirko/License/issues</url>
-  <url type="help">http://gitlab.com/brombinmirko/License/issues</url>
-  <update_contact>send_AT_mirko.pm</update_contact>
-  <screenshots>
-    <screenshot type="default">
-    </screenshot>
-  </screenshots>
+
+  <developer_name>Mirko Brombin</developer_name>
+  <url type="homepage">https://github.com/linuxhubsubpixel/license</url>
+  <url type="bugtracker">https://github.com/linuxhubsubpixel/license/issues</url>
+  <url type="help">https://github.com/linuxhubsubpixel/license</url>
+  <update_contact>send@mirko.pm</update_contact>
+  <custom>
+    <value key="x-appcenter-color-primary">#3278cd</value>
+    <value key="x-appcenter-color-primary-text">rgb(157, 200, 236)</value>
+  </custom>
 </component>

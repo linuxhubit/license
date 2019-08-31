@@ -22,8 +22,8 @@
 namespace License.Constants {
     public const string APP_NAME = "License";
     public const string APP_DESCRIPTION = "Choose your open source project license";
-    public const string APP_ID = "com.github.linux-hub-subpixel.license";
+    public const string APP_ID = "com.github.linuxhubsubpixel.license";
     public const string SCHEMA_NAME = APP_ID;
-    public const string DESKTOP_NAME = "com.github.linux-hub-subpixel.license.desktop";
+    public const string DESKTOP_NAME = "com.github.linuxhubsubpixel.license.desktop";
     public const Gdk.RGBA BRAND_COLOR = { 0.9, 0.2, 0.3, 1 };
 }
