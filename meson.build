@@ -63,7 +63,7 @@ conf_data.set_quoted('PREFIX', get_option('prefix'))
 message ('Configuring desktop entry: ' + meson.project_name() + '.desktop')
 
 desktop_in_file = configure_file(
-    input: join_paths('data', meson.project_name() + '.desktop.in.in'),
+    input: join_paths('data', meson.project_name() + '.desktop'),
     output: '@BASENAME@',
     configuration: config_data
 )
@@ -78,7 +78,7 @@ desktop_file = i18n.merge_file(
 )
 
 appstream_file = i18n.merge_file(
-    input: join_paths (meson.source_root(), 'data', meson.project_name() + '.appdata.xml.in'),
+    input: join_paths (meson.source_root(), 'data', meson.project_name() + '.appdata.xml'),
     output: '@BASENAME@',
     po_dir: join_paths(meson.source_root(), 'po'),
     install: true,
