@@ -26,10 +26,8 @@ public class License.MainWindow : Gtk.Window {
     private Gtk.Stack main_stack;
     private Gtk.StackSidebar stack_sidebar;
     private Gtk.Paned paned;
-    private Gtk.TextView license_gplv3;
-    private Gtk.TextView license_apache2;
-    private Gtk.ScrolledWindow scrolled_gplv3;
-    private Gtk.ScrolledWindow scrolled_apache2;
+    private Gtk.TextView license_text;
+    private Gtk.ScrolledWindow license_view;
     private size_t license_read;
     private DataInputStream license_stream;
     private string license_data;
@@ -38,10 +36,10 @@ public class License.MainWindow : Gtk.Window {
         /*
         *  set default window size
         */
-        set_size_request (900, 800);
+        set_size_request (800, 1000);
 
         var gtk_settings = Gtk.Settings.get_default ();
-        
+
         /*
         *  create switcher for dark/light theme selection
         */
@@ -63,37 +61,89 @@ public class License.MainWindow : Gtk.Window {
         set_titlebar (header_bar);
 
         /*
+        *  create the licenses stack layout
+        */
+        main_stack = new Gtk.Stack ();
+
+        /*
         * grab licenses data from web
         * TODO:
         * - Move this function to a dedicated class
         * - When starting for the first time, save the licenses for offline use
         * - We should use gresources as storage (?)
         */
+
+        license_stream = new DataInputStream(File.new_for_uri (Sources.AGPLV3).read());
+        license_data = license_stream.read_until("", out license_read);
+        license_view = new Gtk.ScrolledWindow(null, null);
+        license_view.set_border_width(10);
+        license_text = new Gtk.TextView();
+        license_text.get_buffer().set_text(license_data);
+        license_view.add (license_text);
+        main_stack.add_titled (license_view, "GNU AGPLv3", "GNU AGPLv3");
+
         license_stream = new DataInputStream(File.new_for_uri (Sources.GPLV3).read());
         license_data = license_stream.read_until("", out license_read);
+        license_view = new Gtk.ScrolledWindow(null, null);
+        license_view.set_border_width(10);
+        license_text = new Gtk.TextView();
+        license_text.get_buffer().set_text(license_data);
+        license_view.add (license_text);
+        main_stack.add_titled (license_view, "GNU GPLv3", "GNU GPLv3");
 
-        scrolled_gplv3 = new Gtk.ScrolledWindow(null, null);
-        scrolled_gplv3.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC);
-        scrolled_gplv3.set_border_width(10);
-        license_gplv3 = new Gtk.TextView();
-        license_gplv3.get_buffer().set_text(license_data);
-        scrolled_gplv3.add (license_gplv3);
-
-        license_stream = new DataInputStream(File.new_for_uri (Sources.APACHE2).read());
+        license_stream = new DataInputStream(File.new_for_uri (Sources.LGPLV3).read());
         license_data = license_stream.read_until("", out license_read);
-        scrolled_apache2 = new Gtk.ScrolledWindow(null, null);
-        scrolled_apache2.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC);
-        scrolled_apache2.set_border_width(10);
-        license_apache2 = new Gtk.TextView();
-        license_apache2.get_buffer().set_text(license_data);
-        scrolled_apache2.add (license_apache2);
+        license_view = new Gtk.ScrolledWindow(null, null);
+        license_view.set_border_width(10);
+        license_text = new Gtk.TextView();
+        license_text.get_buffer().set_text(license_data);
+        license_view.add (license_text);
+        main_stack.add_titled (license_view, "GNU LGPLv3", "GNU LGPLv3");
 
-        /*
-        *  create the licenses stack layout
-        */
-        main_stack = new Gtk.Stack ();
-        main_stack.add_titled (scrolled_gplv3, "GNU GPLv3", "GNU GPLv3");
-        main_stack.add_titled (scrolled_apache2, "Apache 2.0", "Apache 2.0");
+        license_stream = new DataInputStream(File.new_for_uri (Sources.ARTISTICV2).read());
+        license_data = license_stream.read_until("", out license_read);
+        license_view = new Gtk.ScrolledWindow(null, null);
+        license_view.set_border_width(10);
+        license_text = new Gtk.TextView();
+        license_text.get_buffer().set_text(license_data);
+        license_view.add (license_text);
+        main_stack.add_titled (license_view, "Artistic 2.0", "Artistic 2.0");
+
+        license_stream = new DataInputStream(File.new_for_uri (Sources.MPLV2).read());
+        license_data = license_stream.read_until("", out license_read);
+        license_view = new Gtk.ScrolledWindow(null, null);
+        license_view.set_border_width(10);
+        license_text = new Gtk.TextView();
+        license_text.get_buffer().set_text(license_data);
+        license_view.add (license_text);
+        main_stack.add_titled (license_view, "Mozilla Public License 2.0", "Mozilla Public License 2.0");
+
+        license_stream = new DataInputStream(File.new_for_uri (Sources.APACHEV2).read());
+        license_data = license_stream.read_until("", out license_read);
+        license_view = new Gtk.ScrolledWindow(null, null);
+        license_view.set_border_width(10);
+        license_text = new Gtk.TextView();
+        license_text.get_buffer().set_text(license_data);
+        license_view.add (license_text);
+        main_stack.add_titled (license_view, "Apache 2.0", "Apache 2.0");
+
+        license_stream = new DataInputStream(File.new_for_uri (Sources.MIT).read());
+        license_data = license_stream.read_until("", out license_read);
+        license_view = new Gtk.ScrolledWindow(null, null);
+        license_view.set_border_width(10);
+        license_text = new Gtk.TextView();
+        license_text.get_buffer().set_text(license_data);
+        license_view.add (license_text);
+        main_stack.add_titled (license_view, "MIT", "MIT");
+
+        license_stream = new DataInputStream(File.new_for_uri (Sources.UNLICENSE).read());
+        license_data = license_stream.read_until("", out license_read);
+        license_view = new Gtk.ScrolledWindow(null, null);
+        license_view.set_border_width(10);
+        license_text = new Gtk.TextView();
+        license_text.get_buffer().set_text(license_data);
+        license_view.add (license_text);
+        main_stack.add_titled (license_view, "The Unlicense", "The Unlicense");
         
         /*
         *  create sidebar for stack layout

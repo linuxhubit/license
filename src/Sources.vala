@@ -20,6 +20,12 @@
 */
 
 namespace License.Sources {
+    public const string AGPLV3 = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/gnu-agpl-v3.0.md";
     public const string GPLV3 = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/gnu-gpl-v3.0.md";
-    public const string APACHE2 = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/apache-v2.0.md";
+    public const string LGPLV3 = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/gnu-lgpl-v3.0.md";
+    public const string ARTISTICV2 = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/artistic-v2.0.md";
+    public const string MPLV2 = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/mpl-v2.0.md";
+    public const string APACHEV2 = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/apache-v2.0.md";
+    public const string MIT = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/mit.md";
+    public const string UNLICENSE = "https://raw.githubusercontent.com/IQAndreas/markdown-licenses/master/unlicense.md";
 }
