@@ -1,5 +1,5 @@
 # project name and programming language
-project('com.github.linuxhubsubpixel.license', 'vala', 'c', version: '0.1.0')
+project('com.github.mirkobrombin.license', 'vala', 'c', version: '0.1.0')
 
 message ('project name and programming language')
 
