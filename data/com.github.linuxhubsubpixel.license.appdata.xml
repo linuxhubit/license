@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (c) 2017 Adam Bieńkowski (https://github.com/donadigo/eddy) -->
 <component type="desktop">
-  <id>com.github.mirkobrombin.license</id>
+  <id>com.github.linuxhubsubpixel.license</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>License</name>
@@ -10,7 +10,7 @@
     <p>An application born for elementary OS that helps you finding the best license for your open source project</p>
   </description>
   <provides>
-    <binary>com.github.mirkobrombin.license</binary>
+    <binary>com.github.linuxhubsubpixel.license</binary>
   </provides>
   <releases>
       <release version="1.0.0" date="2019-08-31">
@@ -21,10 +21,10 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/mirkobrombin/license/master/data/screenshot-1.png</image>
+      <image>https://raw.githubusercontent.com/linuxhubsubpixel/license/master/data/screenshot-1.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/mirkobrombin/license/master/data/screenshot-2.png</image>
+      <image>https://raw.githubusercontent.com/linuxhubsubpixel/license/master/data/screenshot-2.png</image>
     </screenshot>
   </screenshots>
 
@@ -59,9 +59,9 @@
   </content_rating>
 
   <developer_name>Mirko Brombin</developer_name>
-  <url type="homepage">https://github.com/mirkobrombin/license</url>
-  <url type="bugtracker">https://github.com/mirkobrombin/license/issues</url>
-  <url type="help">https://github.com/mirkobrombin/license</url>
+  <url type="homepage">https://github.com/linuxhubsubpixel/license</url>
+  <url type="bugtracker">https://github.com/linuxhubsubpixel/license/issues</url>
+  <url type="help">https://github.com/linuxhubsubpixel/license</url>
   <update_contact>send@mirko.pm</update_contact>
   <custom>
     <value key="x-appcenter-color-primary">#3278cd</value>

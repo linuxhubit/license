@@ -7,22 +7,22 @@
 <br/>
 
 <div align="center">
-   <a href="https://github.com/mirkobrombin/license/blob/master/LICENSE">
+   <a href="https://github.com/linuxhubsubpixel/license/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg">
    </a>
 </div>
 
 <div align="center">
-    <img  src="https://github.com/mirkobrombin/license/raw/master/data/screenshot-1.png"> <br>
-    <img  src="https://github.com/mirkobrombin/license/raw/master/data/screenshot-2.png">
+    <img  src="https://github.com/linuxhubsubpixel/license/raw/master/data/screenshot-1.png"> <br>
+    <img  src="https://github.com/linuxhubsubpixel/license/raw/master/data/screenshot-2.png">
 </div>
 
 ## Problems/New Features?
-Open a new Issue [here](https://github.com/mirkobrombin/license/issues).
+Open a new Issue [here](https://github.com/linuxhubsubpixel/license/issues).
 
 ## How to run
 ```bash
-com.github.mirkobrombin.license
+com.github.linuxhubsubpixel.license
 ```
 
 ## Known bugs
@@ -31,14 +31,14 @@ com.github.mirkobrombin.license
 ## Installation
 
 ### From AppCenter
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.mirkobrombin/license)
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.linuxhubsubpixel/license)
 
 
 ### From .deb package
-Grab an updated release [here](https://github.com/mirkobrombin/license/releases), then install:
+Grab an updated release [here](https://github.com/linuxhubsubpixel/license/releases), then install:
 
 ```bash
-sudo dpkg -i com.github.mirkobrombin/license_*.deb
+sudo dpkg -i com.github.linuxhubsubpixel/license_*.deb
 ```
 
 
