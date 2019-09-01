@@ -1,5 +1,5 @@
-com.github.linuxhubsubpixel.license (1.0.0) UNSTABLE; urgency=low
+com.github.linuxhubsubpixel.license (1.0.1) UNSTABLE; urgency=low
     
-  * Initial release
+  * Added icons in missing sizes
 
- -- Mirko Brombin <send@mirko.pm>  Sun, 01 Sep 2019 08:44:00 +0200
+ -- Mirko Brombin <send@mirko.pm>  Sun, 01 Sep 2019 21:34:00 +0200
