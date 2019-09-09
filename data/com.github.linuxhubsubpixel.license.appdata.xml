@@ -7,7 +7,7 @@
   <name>License</name>
   <summary>Choose your project license</summary>
   <description>
-    <p>An application born for elementary OS that helps you finding the best license for your open source project</p>
+    <p>An application that helps you finding the best license for your open source project</p>
   </description>
   <provides>
     <binary>com.github.linuxhubsubpixel.license</binary>
