@@ -44,8 +44,8 @@ public class License.MainWindow : Gtk.Window {
         *  create switcher for dark/light theme selection
         */
         mode_switch = new Granite.ModeSwitch.from_icon_name ("display-brightness-symbolic", "weather-clear-night-symbolic");
-        mode_switch.primary_icon_tooltip_text = ("Light background");
-        mode_switch.secondary_icon_tooltip_text = ("Dark background");
+        mode_switch.primary_icon_tooltip_text = _("Light background");
+        mode_switch.secondary_icon_tooltip_text = _("Dark background");
         mode_switch.valign = Gtk.Align.CENTER;
         mode_switch.bind_property ("active", gtk_settings, "gtk_application_prefer_dark_theme");
 
@@ -53,8 +53,8 @@ public class License.MainWindow : Gtk.Window {
         *  create header_bar and pack buttons
         */
         header_bar = new Gtk.HeaderBar ();
-        header_bar.set_title (Constants.APP_NAME);
-        header_bar.set_subtitle (Constants.APP_DESCRIPTION);
+        header_bar.set_title (_("License"));
+        header_bar.set_subtitle (_("Choose your open source project license"));
         header_bar.show_close_button = true;
         header_bar.has_subtitle = true;
         header_bar.pack_end (mode_switch);
