@@ -6,5 +6,5 @@ Comment=Choose your project license
 Exec=com.github.linuxhubsubpixel.license %U
 Icon=com.github.linuxhubsubpixel.license
 Terminal=false
-Categories=System;GTK;
+Categories=Utility;Development;
 Keywords=license;
