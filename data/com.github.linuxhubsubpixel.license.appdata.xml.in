@@ -12,8 +12,14 @@
   <provides>
     <binary>com.github.linuxhubsubpixel.license</binary>
   </provides>
-  <releases>
-      <release version="1.0.0" date="2019-08-31">
+  <releases> 
+      <release version="1.0.3" date="2019-12-14">
+        <description>
+          <p>French translation by NathanBnm</p>
+          <p>Change app category</p>
+        </description>
+      </release>
+      <release version="1.0.2" date="2019-08-31">
         <description>
           <p>Initial release</p>
         </description>
