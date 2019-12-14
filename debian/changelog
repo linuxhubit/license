@@ -1,3 +1,10 @@
+com.github.linuxhubsubpixel.license (1.0.3) UNSTABLE; urgency=low
+    
+  * French translation by NathanBnm
+  * Fix app category
+
+ -- Mirko Brombin <send@mirko.pm>  Sat, 14 Dec 2019 22:52:00 +0200
+
 com.github.linuxhubsubpixel.license (1.0.2) UNSTABLE; urgency=low
     
   * Removed elementary os from app description
