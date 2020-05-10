@@ -30,9 +30,17 @@ com.github.linuxhubsubpixel.license
 
 ## Installation
 
-### From AppCenter
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.linuxhubsubpixel/license)
-
+### From PPA
+Configure PPA:
+```bash
+curl -s --compressed "https://linuxhubit.github.io/ppa/KEY.gpg" | sudo apt-key add -
+sudo curl -s --compressed -o /etc/apt/sources.list.d/my_list_file.list "https://linuxhubit.github.io/ppa/my_list_file.list"
+sudo apt update
+```
+then install:
+```bash
+sudo apt install com.github.linuxhubit.license
+```
 
 ### From .deb package
 Grab an updated release [here](https://github.com/linuxhubsubpixel/license/releases), then install:
