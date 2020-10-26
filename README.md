@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.imgur.com/eQ4FLtV.png" width="64">
+  <img src="https://raw.githubusercontent.com/linuxhubit/license/master/data/icons/48/com.github.linuxhubit.license.svg" width="64">
   <h1 align="center">License</h1>
   <p align="center">Choose your open source project license</p>
 </div>
