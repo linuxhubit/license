@@ -49,5 +49,10 @@ Grab an updated release [here](https://github.com/linuxhubsubpixel/license/relea
 sudo dpkg -i com.github.linuxhubsubpixel/license_*.deb
 ```
 
-
-
+## Build
+```bash
+meson build --prefix=/usr
+cd build
+ninja
+sudo ninja install
+```
