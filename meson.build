@@ -1,4 +1,4 @@
-project('com.github.linuxhubsubpixel.license', 'vala', 'c', version: '0.1.0')
+project('com.github.linuxhubit.license', 'vala', 'c', version: '0.1.0')
 
 
 gnome = import('gnome')

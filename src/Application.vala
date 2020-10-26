@@ -24,7 +24,7 @@ public class License.Application : Gtk.Application {
     private MainWindow? window = null;
 
     construct {
-        application_id = "com.github.linuxhubsubpixel.license";
+        application_id = "com.github.linuxhubit.license";
         flags |= ApplicationFlags.HANDLES_OPEN;
     }
 
