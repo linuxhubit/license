@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (c) 2017 Adam Bieńkowski (https://github.com/donadigo/eddy) -->
 <component type="desktop">
-  <id>com.github.linuxhubsubpixel.license</id>
+  <id>com.github.linuxhubit.license</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>License</name>
@@ -10,27 +10,25 @@
     <p>An application that helps you finding the best license for your open source project</p>
   </description>
   <provides>
-    <binary>com.github.linuxhubsubpixel.license</binary>
+    <binary>com.github.linuxhubit.license</binary>
   </provides>
   <releases> 
-      <release version="1.0.3" date="2019-12-14">
+      <release version="1.0.4" date="2020-26-10">
         <description>
+          <p>Dutch translation by Vistaus</p>
+          <p>Portoguese translation by rottenpants466</p>
           <p>French translation by NathanBnm</p>
+          <p>New icon by Fatih20</p>
           <p>Change app category</p>
-        </description>
-      </release>
-      <release version="1.0.2" date="2019-08-31">
-        <description>
-          <p>Initial release</p>
         </description>
       </release>
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/linuxhubsubpixel/license/master/data/screenshot-1.png</image>
+      <image>https://raw.githubusercontent.com/linuxhubit/license/master/data/screenshot-1.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/linuxhubsubpixel/license/master/data/screenshot-2.png</image>
+      <image>https://raw.githubusercontent.com/linuxhubit/license/master/data/screenshot-2.png</image>
     </screenshot>
   </screenshots>
 
@@ -65,9 +63,9 @@
   </content_rating>
 
   <developer_name>Mirko Brombin</developer_name>
-  <url type="homepage">https://github.com/linuxhubsubpixel/license</url>
-  <url type="bugtracker">https://github.com/linuxhubsubpixel/license/issues</url>
-  <url type="help">https://github.com/linuxhubsubpixel/license</url>
+  <url type="homepage">https://github.com/linuxhubit/license</url>
+  <url type="bugtracker">https://github.com/linuxhubit/license/issues</url>
+  <url type="help">https://github.com/linuxhubit/license</url>
   <update_contact>send@mirko.pm</update_contact>
   <custom>
     <value key="x-appcenter-color-primary">#3278cd</value>
