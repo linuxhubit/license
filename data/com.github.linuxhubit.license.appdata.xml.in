@@ -13,7 +13,7 @@
     <binary>com.github.linuxhubit.license</binary>
   </provides>
   <releases> 
-      <release version="1.0.4" date="2020-26-10">
+      <release version="1.0.4" date="2020-10-26">
         <description>
           <p>Dutch translation by Vistaus</p>
           <p>Portoguese translation by rottenpants466</p>
