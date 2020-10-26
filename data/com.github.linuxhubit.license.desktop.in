@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=License
+GenericName=License chooser
+Comment=Choose your project license
+Exec=com.github.linuxhubit.license %U
+Icon=com.github.linuxhubit.license
+Terminal=false
+Categories=Utility;Development;
+Keywords=license;
